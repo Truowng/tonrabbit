@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+@keyframes spinUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+@keyframes spinDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// START BREAKPOINT VARIABLES
+@mixin min-extra-desktop {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin min-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin min-landscape {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin extra-desktop {
+  @media (max-width: 1440.98px) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media only screen and (max-width: 1399.98px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media only screen and (max-width: 1023.98px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin landscape-phone {
+  @media only screen and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin extra-mobile {
+  @media only screen and (max-width: 576.98px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 480.98px) {
+    @content;
+  }
+}
+
+@mixin small-mobile {
+  @media only screen and (max-width: 391.98px) {
+    @content;
+  }
+}
+// END BREAKPOINT VARIABLES

@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@keyframes spinUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+@keyframes spinDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #fff !important;
+}
+a:hover {
+  color: #fff;
+}
+
+body {
+  font-size: 14px;
+  font-family: "JetBrains Mono", monospace !important;
+  background-color: #0089d1 !important;
+  color: #fff;
+}
+
+img {
+  width: 100%;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.form-container {
+  max-width: 60%;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.form-container .form-title {
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 80px;
+  font-weight: 700;
+}
+.form-container .form-state {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  transition: all ease 0.3s;
+  margin-bottom: 60px;
+}
+.form-container .form-state .line {
+  height: 1px;
+  background-color: #fff;
+  flex: 1;
+  transition: all ease 0.3s;
+}
+.form-container .form-state .state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 500px;
+  background-color: #fff;
+  background: rgba(255, 255, 255, 0.5);
+  transition: all ease 0.3s;
+}
+.form-container .form-state .state p {
+  font-size: 20px;
+  margin-bottom: 0;
+  color: #838383;
+  transition: all ease 0.3s;
+}
+.form-container .state-content {
+  width: 100%;
+}
+.form-container .state-item {
+  display: none;
+}
+.form-container .state-item .title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.form-container .state-item .desc {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.form-container .state-item input {
+  margin-bottom: 20px;
+  background: transparent;
+  outline: none;
+  border: 1px solid #c1c1c1;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  width: 100%;
+  transition: all ease 0.3s;
+}
+.form-container .state-item input::-moz-placeholder {
+  color: #c1c1c1;
+}
+.form-container .state-item input::placeholder {
+  color: #c1c1c1;
+}
+.form-container .state-item input:focus {
+  border-color: #fff;
+}
+.form-container .state-item button {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 20px;
+  transition: all ease 0.3s;
+  font-size: 18px;
+  font-weight: 700;
+}
+.form-container .state-item button:hover {
+  background-color: #cecece;
+}
+.form-container .state-item .submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-container .state-item .submit-btn .icon {
+  width: 30px;
+  display: none;
+  animation: spin 3s linear infinite;
+}
+.form-container .state-item .submit-btn .icon img {
+  filter: invert(1);
+}
+.form-container .state-item .submit-btn.loading {
+  pointer-events: none;
+}
+.form-container .state-item .submit-btn.loading .text {
+  display: none;
+}
+.form-container .state-item .submit-btn.loading .icon {
+  display: block;
+}
+.form-container.state-1 .form-state .state-one {
+  background-color: #fff;
+}
+.form-container.state-1 .form-state .state-one p {
+  color: #000;
+}
+.form-container.state-1 .state-item.state-one {
+  display: block;
+}
+.form-container.state-2 .form-state .state-one,
+.form-container.state-2 .form-state .state-two {
+  background-color: #fff;
+}
+.form-container.state-2 .form-state .state-one p,
+.form-container.state-2 .form-state .state-two p {
+  color: #000;
+}
+.form-container.state-2 .state-item.state-two {
+  display: block;
+}
+.form-container.state-3 .form-state .state-one,
+.form-container.state-3 .form-state .state-two,
+.form-container.state-3 .form-state .state-three {
+  background-color: #fff;
+}
+.form-container.state-3 .form-state .state-one p,
+.form-container.state-3 .form-state .state-two p,
+.form-container.state-3 .form-state .state-three p {
+  color: #000;
+}
+.form-container.state-3 .state-item.state-three {
+  display: block;
+}
+.form-container.state-4 .form-state .state-one,
+.form-container.state-4 .form-state .state-two,
+.form-container.state-4 .form-state .state-three,
+.form-container.state-4 .form-state .state-four {
+  background-color: #fff;
+}
+.form-container.state-4 .form-state .state-one p,
+.form-container.state-4 .form-state .state-two p,
+.form-container.state-4 .form-state .state-three p,
+.form-container.state-4 .form-state .state-four p {
+  color: #000;
+}
+.form-container.state-4 .state-item.state-four {
+  display: block;
+}
+.form-container form {
+  width: 100%;
+  max-width: 311px;
+}
+.form-container form input {
+  width: 100%;
+}
+
+@media only screen and (max-width: 991.98px) {
+  .form-container {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 576.98px) {
+  .form-container .form-title {
+    font-size: 28px;
+    text-align: center;
+  }
+  .form-container .state-item .title {
+    font-size: 24px;
+  }
+}
