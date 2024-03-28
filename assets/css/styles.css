@@ -47,6 +47,28 @@ img {
   width: 100%;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+header .header-wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 80px;
+}
+header .socials {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+header .socials a {
+  width: 40px;
+}
+
 #form {
   display: flex;
   justify-content: center;
@@ -55,6 +77,33 @@ img {
   overflow: hidden;
   width: 100%;
   position: relative;
+}
+#form .decor-el {
+  position: absolute;
+  z-index: 0;
+}
+#form .decor-el:nth-child(1) {
+  top: 12%;
+  left: 9%;
+  width: 100px;
+  animation: spinUp ease 5s alternate-reverse infinite;
+}
+#form .decor-el:nth-child(2) {
+  top: 30%;
+  right: 6%;
+  width: 150px;
+  animation: spinUp ease 5s alternate infinite;
+}
+@media only screen and (max-width: 576.98px) {
+  #form .decor-el:nth-child(2) {
+    display: none;
+  }
+}
+#form .decor-el:nth-child(3) {
+  bottom: 6%;
+  left: 11%;
+  width: 200px;
+  animation: spinDown ease 5s alternate-reverse infinite;
 }
 
 .form-container {
@@ -153,6 +202,7 @@ img {
   transition: all ease 0.3s;
   font-size: 18px;
   font-weight: 700;
+  background-color: #fff;
 }
 .form-container .state-item button:hover {
   background-color: #cecece;
@@ -238,6 +288,9 @@ img {
 @media only screen and (max-width: 991.98px) {
   .form-container {
     max-width: 100%;
+  }
+  header .header-wrapper {
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 576.98px) {

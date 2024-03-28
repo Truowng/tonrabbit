@@ -22,6 +22,28 @@ img {
   width: 100%;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  .header-wrapper {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 80px;
+  }
+  .socials {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    a {
+      width: 40px;
+    }
+  }
+}
+
 #form {
   display: flex;
   justify-content: center;
@@ -30,31 +52,31 @@ img {
   overflow: hidden;
   width: 100%;
   position: relative;
-  // .decor-el {
-  //   position: absolute;
-  //   z-index: 0;
-  //   &:nth-child(1) {
-  //     top: 12%;
-  //     left: 9%;
-  //     width: 70px;
-  //     animation: spinUp ease 5s alternate-reverse infinite;
-  //   }
-  //   &:nth-child(2) {
-  //     top: 30%;
-  //     right: 6%;
-  //     width: 121px;
-  //     animation: spinUp ease 5s alternate infinite;
-  //     @include extra-mobile {
-  //       display: none;
-  //     }
-  //   }
-  //   &:nth-child(3) {
-  //     bottom: 6%;
-  //     left: 11%;
-  //     width: 164px;
-  //     animation: spinDown ease 5s alternate-reverse infinite;
-  //   }
-  // }
+  .decor-el {
+    position: absolute;
+    z-index: 0;
+    &:nth-child(1) {
+      top: 12%;
+      left: 9%;
+      width: 100px;
+      animation: spinUp ease 5s alternate-reverse infinite;
+    }
+    &:nth-child(2) {
+      top: 30%;
+      right: 6%;
+      width: 150px;
+      animation: spinUp ease 5s alternate infinite;
+      @include extra-mobile {
+        display: none;
+      }
+    }
+    &:nth-child(3) {
+      bottom: 6%;
+      left: 11%;
+      width: 200px;
+      animation: spinDown ease 5s alternate-reverse infinite;
+    }
+  }
 }
 
 .form-container {
@@ -149,6 +171,7 @@ img {
       transition: all ease 0.3s;
       font-size: 18px;
       font-weight: 700;
+      background-color: #fff;
       &:hover {
         background-color: #cecece;
       }
@@ -254,6 +277,11 @@ img {
 @include tablet {
   .form-container {
     max-width: 100%;
+  }
+  header {
+    .header-wrapper {
+      justify-content: center;
+    }
   }
 }
 
