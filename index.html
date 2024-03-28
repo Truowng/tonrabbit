@@ -18,6 +18,34 @@
     />
 
     <title>Ton Rabbit</title>
+
+    <style>
+      #form .decor {
+        position: absolute;
+        z-index: 0;
+      }
+      #form .decor:nth-child(1) {
+        top: 12%;
+        left: 9%;
+        width: 100px;
+      }
+      #form .decor:nth-child(2) {
+        top: 30%;
+        right: 6%;
+        width: 150px;
+      }
+
+      #form .decor:nth-child(3) {
+        bottom: 6%;
+        left: 11%;
+        width: 200px;
+      }
+      @media only screen and (max-width: 991.98px) {
+        #form .decor {
+          display: none;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -35,13 +63,13 @@
       </div>
     </header>
     <div id="form">
-      <div class="decor-el">
+      <div class="decor">
         <img src="./assets/images/rabit-1.svg" alt="rabit" />
       </div>
-      <div class="decor-el">
+      <div class="decor">
         <img src="./assets/images/rabit-2.svg" alt="rabit" />
       </div>
-      <div class="decor-el">
+      <div class="decor">
         <img src="./assets/images/rabit-3.svg" alt="rabit" />
       </div>
       <div class="container">

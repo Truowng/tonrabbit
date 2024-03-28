@@ -53,20 +53,18 @@ header {
   overflow: hidden;
   width: 100%;
   position: relative;
-  .decor-el {
+  .decor {
     position: absolute;
     z-index: 0;
     &:nth-child(1) {
       top: 12%;
       left: 9%;
       width: 100px;
-      animation: spinUp ease 5s alternate-reverse infinite;
     }
     &:nth-child(2) {
       top: 30%;
       right: 6%;
       width: 150px;
-      animation: spinUp ease 5s alternate infinite;
       @include extra-mobile {
         display: none;
       }
@@ -75,7 +73,6 @@ header {
       bottom: 6%;
       left: 11%;
       width: 200px;
-      animation: spinDown ease 5s alternate-reverse infinite;
     }
   }
 }
@@ -174,7 +171,7 @@ header {
       font-size: 18px;
       font-weight: 700;
       background-color: #fff;
-      color: #0089d1;
+      color: #0089d1 !important;
       &:hover {
         background-color: #cecece;
       }
@@ -278,6 +275,11 @@ header {
 // RESPONSIVE
 
 @include tablet {
+  #form {
+    .decor {
+      display: none;
+    }
+  }
   .form-container {
     max-width: 100%;
   }

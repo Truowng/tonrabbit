@@ -78,32 +78,29 @@ header .socials a {
   width: 100%;
   position: relative;
 }
-#form .decor-el {
+#form .decor {
   position: absolute;
   z-index: 0;
 }
-#form .decor-el:nth-child(1) {
+#form .decor:nth-child(1) {
   top: 12%;
   left: 9%;
   width: 100px;
-  animation: spinUp ease 5s alternate-reverse infinite;
 }
-#form .decor-el:nth-child(2) {
+#form .decor:nth-child(2) {
   top: 30%;
   right: 6%;
   width: 150px;
-  animation: spinUp ease 5s alternate infinite;
 }
 @media only screen and (max-width: 576.98px) {
-  #form .decor-el:nth-child(2) {
+  #form .decor:nth-child(2) {
     display: none;
   }
 }
-#form .decor-el:nth-child(3) {
+#form .decor:nth-child(3) {
   bottom: 6%;
   left: 11%;
   width: 200px;
-  animation: spinDown ease 5s alternate-reverse infinite;
 }
 
 .form-container {
@@ -204,7 +201,7 @@ header .socials a {
   font-size: 18px;
   font-weight: 700;
   background-color: #fff;
-  color: #0089d1;
+  color: #0089d1 !important;
 }
 .form-container .state-item button:hover {
   background-color: #cecece;
@@ -288,6 +285,9 @@ header .socials a {
 }
 
 @media only screen and (max-width: 991.98px) {
+  #form .decor {
+    display: none;
+  }
   .form-container {
     max-width: 100%;
   }
